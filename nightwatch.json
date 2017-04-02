@@ -1,0 +1,79 @@
+{
+  "src_folders": [
+    "tests",
+    "pages",
+    "conf"
+  ],
+  "output_folder": "reports/XMLReports",
+  "custom_commands_path": "",
+  "custom_assertions_path": "",
+  "page_objects_path": "pages",
+  "globals_path": "globals.js",
+  "selenium": {
+    "start_process": true,
+    "server_path": "lib/selenium/selenium-server-standalone-2.53.0.jar",
+    "start_session": true,
+    "log_path": "log/",
+    "host": "127.0.0.1",
+    "port": 4444,
+    "cli_args": {
+      "webdriver.chrome.driver": "lib/drivers/chromedriver"
+    }
+  },
+  "test_settings": {
+    "prd_env" : {
+      "launch_url" : "https://rapidapi.com",
+            "globals" : {
+                "site_url" : "https://rapidapi.com/",
+                "signup_url": "https://dashboard.rapidapi.com/"
+            },
+            "desiredCapabilities": {
+              "browserName": "chrome",
+              "chromeOptions": {
+                "args": [
+                  "disable-web-security",
+                  "ignore-certificate-errors",
+                  "--test-type"
+                ]
+              }
+            }
+        },
+    "stg_env" : {
+      "launch_url" : "https://stg_rapidapi.com",
+        "globals" : {
+            "site_url" : "https://stg_rapidapi.com/"
+        },
+        "desiredCapabilities": {
+          "browserName": "chrome",
+          "chromeOptions": {
+            "args": [
+              "disable-web-security",
+              "ignore-certificate-errors",
+              "--test-type"
+            ]
+          }
+        }
+    },
+    "bstk": {
+      "launch_url" : "https://rapidapi.com",
+            "globals" : {
+                "site_url" : "https://rapidapi.com/",
+                "signup_url": "https://dashboard.rapidapi.com/"
+            },
+      "selenium_port": 80,
+      "selenium_host": "hub.browserstack.com",
+      "silent": true,
+      "screenshots": {
+        "enabled": false,
+        "path": ""
+      },
+      "desiredCapabilities": {
+        "build": "nightwatch-browserstack",
+        "browserstack.user": "yroketyroket1",
+        "browserstack.key": "UHAUP7KQoN2J6kjVarh6",
+        "browserstack.debug": true,
+        "browser": "chrome"
+      }
+    }
+  }
+}
