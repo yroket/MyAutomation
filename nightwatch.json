@@ -69,8 +69,8 @@
       },
       "desiredCapabilities": {
         "build": "nightwatch-browserstack",
-        "browserstack.user": "yroketyroket1",
-        "browserstack.key": "UHAUP7KQoN2J6kjVarh6",
+        "browserstack.user": "MY_USER",
+        "browserstack.key": "MY_KEY",
         "browserstack.debug": true,
         "browser": "chrome"
       }
