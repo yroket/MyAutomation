@@ -1,0 +1,5 @@
+Run test commands:
+node nightwatch -a createaccount -e prd_env
+node nightwatch -a searchapi -e prd_env
+node nightwatch -a login -e prd_env
+node nightwatch -c conf/parallel.conf.js  -e chrome,firefox
